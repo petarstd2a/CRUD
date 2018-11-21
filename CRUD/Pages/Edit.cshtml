@@ -1,0 +1,23 @@
+﻿@page
+@model CRUD.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+
+<h1>Edit Customer - @Model.Employee.Id</h1>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="Employee.Id" type="hidden" />
+    <div>
+        <label asp-for="Employee.Name"></label>
+        <div>
+            <input asp-for="Employee.Name" />
+            <span asp-validation-for="Employee.Name"></span>
+        </div>
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+
